@@ -1,0 +1,23 @@
+
+>>> x = ['arthur' , 'brian']
+>>> y = [17, 42, x]                	# y contains reference to x
+>>> x.append('sir robin')    		# this changes the object called 'x'
+>>> y                               	# the object currently called 'x' is part of y
+[17, 42, ['arthur', 'brian', 'sir robin']]
+>>> x = x + ['parrot']           	# this assigns the name 'x' to a new object;old object is unchanged
+>>> y
+[17, 42, ['arthur', 'brian', 'sir robin']]
+>>> x
+['arthur', 'brian', 'sir robin', 'parrot']
+
+>>> ================================ RESTART ================================
+>>> x = ['arthur' , 'brian']
+>>> y = [17, 42, x]              	# y contains reference to x
+>>> y
+[17, 42, ['arthur', 'brian']]
+>>> y[-1] = 99                     	# y no longer contains reference to x, but x is unchanged
+>>> y
+[17, 42, 99]
+>>> x
+['arthur', 'brian']
+
